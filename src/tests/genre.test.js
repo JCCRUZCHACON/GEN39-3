@@ -2,7 +2,7 @@ require('../models')
 const app = require('../app')
 const request = require('supertest')
 
-const BASE_URL = '/api/v1/genres'
+const BASE_URL = "/api/v1/genres"
 
 const genres = {
   name: "Adventure"
@@ -11,7 +11,7 @@ const genres = {
 let genreId
 
 const genreUpdate = {
-  name: 'action',
+  name: "action",
 }
 
 //! test del post

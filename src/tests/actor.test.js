@@ -2,7 +2,7 @@ require('../models')
 const app = require('../app')
 const request = require('supertest')
 
-const BASE_URL = '/api/v1/actors'
+const BASE_URL = "/api/v1/actors"
 
 const actors = {
   firstName: "Stephen",

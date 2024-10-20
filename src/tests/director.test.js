@@ -2,7 +2,7 @@ require('../models')
 const app = require('../app')
 const request = require('supertest')
 
-const BASE_URL = '/api/v1/directors'
+const BASE_URL = "/api/v1/directors"
 
 const directors = {
   firstName: "Jeff ",
@@ -15,7 +15,7 @@ const directors = {
 let directorId
 
 const directorUpdate = {
-  firstName: 'Samuel',
+  firstName: "Samuel",
 }
 
 //! test del post

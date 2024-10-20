@@ -7,10 +7,10 @@ const request = require('supertest')
 let genreId
 beforeAll(async () => {
   const genres = {
-    name: 'action',
+    name: "action",
   }
 const res = await request(app)
-    .post('/api/v1/genres')
+    .post("/api/v1/genres")
     .send(genres)
 genreId = res.body.id
 })
@@ -30,7 +30,7 @@ beforeAll(async () => {
     birthday: "1982-07-10"
   }
 const res = await request(app)
-    .post('/api/v1/actors')
+    .post("/api/v1/actors")
     .send(actors)
 actorId = res.body.id
 })
@@ -50,7 +50,7 @@ beforeAll(async () => {
     birthday: "1982-11-15"
   }
 const res = await request(app)
-    .post('/api/v1/directors')
+    .post("/api/v1/directors")
     .send(directors)
 directorId = res.body.id
 })
@@ -61,7 +61,7 @@ afterAll(async () => {
 
 //--------------------------------------------------------------
 
-const BASE_URL = '/api/v1/movies'
+const BASE_URL = "/api/v1/movies"
 
 
 const movies = {
@@ -74,7 +74,7 @@ const movies = {
 let movieId
 
 const movieUpdate = {
-  name: 'The Fall Guy',
+  name: "The Fall Guy",
 }
 
 //! test del post
