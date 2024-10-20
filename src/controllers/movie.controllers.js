@@ -40,6 +40,7 @@ const update = catchError(async(req, res) => {
 const setGenre = catchError(async(req, res)=> {
     const { id } = req.params
     const movie = await Movie.findByPk(id)
+    if(!movie) return res.status(404).json({error: "movie not found"})
     await movie.setGenres(req.body)
     const genres = await movie.getGenres()
     return res.json(genres)
@@ -48,6 +49,7 @@ const setGenre = catchError(async(req, res)=> {
 const setActor = catchError(async(req, res)=> {
     const { id } = req.params
     const movie = await Movie.findByPk(id)
+    if(!movie) return res.status(404).json({error: "movie not found"})
     await movie.setActors(req.body)
     const actors = await movie.getActors()
     return res.json(actors)
@@ -56,6 +58,7 @@ const setActor = catchError(async(req, res)=> {
 const setDirector = catchError(async(req, res)=> {
     const { id } = req.params
     const movie = await Movie.findByPk(id)
+    if(!movie) return res.status(404).json({error: "movie not found"})
     await movie.setDirectors(req.body)
     const directors = await movie.getDirectors()
     return res.json(directors)
