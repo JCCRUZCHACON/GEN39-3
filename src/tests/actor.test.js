@@ -39,6 +39,9 @@ test("GET -> 'BASE_URL', should return statusCode 200, and res.body.length === 1
     expect(res.body).toBeDefined()
     expect(res.body).toHaveLength(1)
     expect(res.body.length).toBe(1)
+
+    expect(res.body[0].movies).toBeDefined()
+    expect(res.body[0].movies).toHaveLength(0)
   })
   
   //! test getOne
@@ -49,6 +52,9 @@ test("GET -> 'BASE_URL', should return statusCode 200, and res.body.length === 1
     expect(res.body).toBeDefined();
     expect(res.body.firstName).toBe(actors.firstName);
     expect(res.body.id).toBe(actorId);
+
+    expect(res.body.movies).toBeDefined()
+    expect(res.body.movies).toHaveLength(0)
   });
   
   
